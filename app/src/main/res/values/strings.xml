@@ -14,4 +14,11 @@
     <string name="action_email">Email</string>
     <string name="action_ePassword">Enter Password</string>
     <string name="action_cPassword">Confirm Passowrd</string>
+    <string name="textview">TextView</string>
+    <string name="event_description">Event Description</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="location_of_event">Location of Event</string>
+    <string name="textview1">TextView</string>
+    <string name="name_of_organization">Name of Organization</string>
+    <string name="event_name">Event Name</string>
 </resources>
