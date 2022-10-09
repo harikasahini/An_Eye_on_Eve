@@ -36,4 +36,9 @@
     <string name="description_taste_the_country_food">Description: Taste the country food.</string>
     <string name="date_saturday_18th_oct">Date: Saturday, 18th Oct</string>
     <string name="time_6_00_p_m_4_00_p_m">Time: 6:00 P.M - 4:00 P.M</string>
+    <string name="roots_and_blues_festival">Roots and Blues Festival</string>
+    <string name="location_stephens_lake_park">Location: Stephens Lake Park</string>
+    <string name="description_three_days_of_music_festival">Description: Three days of music festival.</string>
+    <string name="date_friday_7th_oct">Date: Friday, 7th Oct</string>
+    <string name="time_12_00_p_m_4_00_p_m">Time: 12:00 P.M - 4:00 P.M</string>
 </resources>
