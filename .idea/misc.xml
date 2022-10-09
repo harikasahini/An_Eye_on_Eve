@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/s546908/AndroidStudioProjects/An_Eye_on_Eve/app/src/main/res/layout/activity_event_detail_view.xml" value="0.1796875" />
+        <entry key="..\:/Users/s546908/AndroidStudioProjects/An_Eye_on_Eve/app/src/main/res/layout/activity_user_view.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_event_detail_view.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2871376811594203" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
