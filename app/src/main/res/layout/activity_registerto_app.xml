@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/enterpassword" />
 
     <Button
-        android:id="@+id/RegisterBTN2"
+        android:id="@+id/createEventBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#4D9EC3"
@@ -111,7 +111,7 @@
         app:layout_constraintEnd_toStartOf="@+id/signinNavigateBTN"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterBTN2" />
+        app:layout_constraintTop_toBottomOf="@+id/createEventBTN" />
 
     <Button
         android:id="@+id/signinNavigateBTN"
@@ -125,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/helpTextRtT"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterBTN2" />
+        app:layout_constraintTop_toBottomOf="@+id/createEventBTN" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

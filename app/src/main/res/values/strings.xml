@@ -17,29 +17,13 @@
     <string name="action_cPassword">Confirm Passowrd</string>
     <string name="textview">TextView</string>
     <string name="event_description">Event Description</string>
-    <string name="date_and_time">Date and Time</string>
+    <string name="date">Date(YYYY-MM-DD)</string>
+    <string name="time">Time</string>
     <string name="location_of_event">Location of Event</string>
     <string name="textview1">TextView</string>
     <string name="name_of_organization">Name of Organization</string>
     <string name="event_name">Event Name</string>
     <string name="create_an_event">create_an_event</string>
-    <string name="location_art_centre_maryville">location_art_centre_maryville</string>
-    <string name="description_train_children_on_craft_making">description_train_children_on_craft_making</string>
-    <string name="date_saturday">date_saturday</string>
-    <string name="time_4_00_p_m_weekly">time_4_00_p_m_weekly</string>
-    <string name="earth_wind_and_fire">Earth, Wind and Fire</string>
-    <string name="location_upmc_events_centre">Location: UPMC Events Centre</string>
-    <string name="description_earth_wind_and_fire_group_concert">Description: Earth,Wind and Fire group concert.</string>
-    <string name="date_saturday_8th_oct">Date: Saturday, 8th Oct</string>
-    <string name="time_11_00_a_m_4_00_p_m">Time: 11:00 A.M - 4:00 P.M</string>
-    <string name="mo_food_truck_fest">Mo Food Truck Fest</string>
-    <string name="location_hug_house_maryville">Location: Hug House, Maryville</string>
-    <string name="description_taste_the_country_food">Description: Taste the country food.</string>
-    <string name="date_saturday_18th_oct">Date: Saturday, 18th Oct</string>
-    <string name="time_6_00_p_m_4_00_p_m">Time: 6:00 P.M - 4:00 P.M</string>
-    <string name="roots_and_blues_festival">Roots and Blues Festival</string>
-    <string name="location_stephens_lake_park">Location: Stephens Lake Park</string>
-    <string name="description_three_days_of_music_festival">Description: Three days of music festival.</string>
-    <string name="date_friday_7th_oct">Date: Friday, 7th Oct</string>
-    <string name="time_12_00_p_m_4_00_p_m">Time: 12:00 P.M - 4:00 P.M</string>
+
+
 </resources>
