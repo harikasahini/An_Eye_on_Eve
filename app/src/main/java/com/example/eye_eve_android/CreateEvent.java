@@ -1,22 +1,76 @@
 package com.example.eye_eve_android;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
 
 public class CreateEvent extends AppCompatActivity {
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_event);
+        setContentView(R.layout.fragment_add_box);
         intent = getIntent();
+        MaterialToolbar toolbar = findViewById(R.id.topAppBar);
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem item) {
+
+                int id = item.getItemId();
+                item.setChecked(true);
+
+                drawerLayout.closeDrawer(GravityCompat.START);
+                switch (id) {
+
+                    case R.id.nav_home:
+                        replaceFragment(new HomeFragment());
+                        break;
+                    case R.id.nav_organizer:
+                        replaceFragment(new ChecklistFragment());
+                        break;
+                    case R.id.nav_logout:
+                        replaceFragment(new LoginFragment());
+                        break;
+                    case R.id.about:
+                        replaceFragment(new Emoji_PeopleFragment());
+                        break;
+                    default:
+                        return true;
+
+                }
+                return true;
+            }
+        });
+    }
+        private void replaceFragment(Fragment fragment){
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout,fragment);
+            fragmentTransaction.commit();
     }
 
     public void oncreateEvent(View v) {
