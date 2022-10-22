@@ -11,7 +11,6 @@
         android:layout_gravity="center"
         android:layout_margin="16dp"
         android:backgroundTint="#7CECB2B2"
-        android:onClick="onClickcard"
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp">
 
@@ -53,7 +52,7 @@
                 android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/eventTimeTV"
+                android:id="@+id/eveTimeTV"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:text="Time: 4:00 P.M (Weekly)"

@@ -3,23 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/s546653/Desktop/New folder/An_Eye_on_Eve/app/src/main/res/layout/activity_user_view.xml" value="0.1796875" />
-        <entry key="..\:/Users/s546900/Documents/GitHub/An_Eye_on_Eve/app/src/main/res/layout/activity_organizer_view.xml" value="0.1796875" />
-        <entry key="..\:/Users/s546900/Documents/GitHub/An_Eye_on_Eve/app/src/main/res/layout/activity_user_view.xml" value="0.1796875" />
-        <entry key="..\:/Users/s546908/AndroidStudioProjects/An_Eye_on_Eve/app/src/main/res/layout/activity_event_detail_view.xml" value="0.1796875" />
-        <entry key="..\:/Users/s546908/AndroidStudioProjects/An_Eye_on_Eve/app/src/main/res/layout/activity_user_view.xml" value="0.1" />
-        <entry key="..\:/Users/s546954/AndroidStudioProjects/An_Eye_on_Eve_latest/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
-        <entry key="..\:/Users/s546954/AndroidStudioProjects/An_Eye_on_Eve_latest/app/src/main/res/layout/activity_registerto_app.xml" value="0.1796875" />
-        <entry key="..\:/Users/s546954/Documents/GitHub/An_Eye_on_Eve/app/src/main/res/layout/activity_event_detail_view.xml" value="0.13949275362318841" />
-        <entry key="..\:/Users/s546954/Documents/GitHub/An_Eye_on_Eve/app/src/main/res/layout/activity_login.xml" value="0.13949275362318841" />
-        <entry key="..\:/Users/s546954/Documents/GitHub/An_Eye_on_Eve/app/src/main/res/layout/activity_main.xml" value="0.13949275362318841" />
-        <entry key="..\:/Users/s546954/Documents/GitHub/An_Eye_on_Eve/app/src/main/res/layout/activity_organizer_view.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/s546954/Documents/GitHub/An_Eye_on_Eve/app/src/main/res/layout/activity_registration.xml" value="0.13949275362318841" />
-        <entry key="..\:/Users/s546954/Documents/GitHub/An_Eye_on_Eve/app/src/main/res/layout/activity_user_view.xml" value="0.13949275362318841" />
-        <entry key="app/src/main/res/layout/activity_event_detail_view.xml" value="0.27717391304347827" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2871376811594203" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_registration.xml" value="0.207193515704154" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/drawable/boarder.xml" value="0.1" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/layout/activity_create_event.xml" value="0.22" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/layout/activity_event_detail_view.xml" value="0.11481481481481481" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/layout/activity_main.xml" value="0.165625" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/layout/activity_organizer_view.xml" value="0.41818181818181815" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/layout/activity_registerto_app.xml" value="0.11481481481481481" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/layout/activity_user_view.xml" value="0.1" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/layout/eventmodellayout.xml" value="0.1796875" />
+        <entry key="..\:/Users/s546653/AndroidStudioProjects/EYE_EVE_Android/app/src/main/res/layout/layout.xml" value="0.1796875" />
       </map>
     </option>
   </component>
