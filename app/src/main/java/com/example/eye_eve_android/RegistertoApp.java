@@ -39,13 +39,13 @@ private Intent intent;
         Toast.makeText(RegistertoApp.this, "Please select one radio option!", Toast.LENGTH_SHORT).show();
         }
         else if (newFullName.getText().toString().trim().equalsIgnoreCase("")) {
-            newFullName.setError("Full Name is required");
+            newFullName.setError("Full Name is required!");
         } else if (newEmail.getText().toString().trim().equalsIgnoreCase("")) {
-            newEmail.setError("Email address is required");
+            newEmail.setError("Email address is required!");
         } else if (newEnterPassword.getText().toString().trim().equalsIgnoreCase("")) {
-            newEnterPassword.setError(" You must enter the password is required");
+            newEnterPassword.setError("Password is required!");
         } else if (newConfirmPassword.getText().toString().trim().equalsIgnoreCase("")) {
-            newConfirmPassword.setError("You must confirm the password is required");
+            newConfirmPassword.setError("Please confirm your password!!");
         }
         else if(!(newEnterPassword.getText().toString().equals(newConfirmPassword.getText().toString()))){
             Toast.makeText(RegistertoApp.this, "Password's didn't match. Please try again!", Toast.LENGTH_SHORT).show();
