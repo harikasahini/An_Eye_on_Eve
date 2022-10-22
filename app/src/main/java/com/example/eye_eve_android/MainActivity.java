@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private RadioGroup radioGroup;
-    private RadioButton radioButton=null;
+    private RadioButton radioButton;
     public void onClickSignin(View v) {
         EditText newUserName = findViewById(R.id.username);
         EditText newPassword = findViewById(R.id.password);
