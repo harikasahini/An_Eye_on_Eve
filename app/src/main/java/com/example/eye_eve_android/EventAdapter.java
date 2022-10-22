@@ -41,9 +41,11 @@ public class EventAdapter extends
         modelCountTV.setText(String.valueOf(myEventModel.eventList.get(position).eventLocation));
         TextView taskTimeTV = holder.itemView.findViewById(R.id.eventDateTV);
         taskTimeTV.setText(myEventModel.eventList.get(position).date);
-        TextView maxclicksTV = holder.itemView.findViewById(R.id.eventTimeTV);
+        TextView maxclicksTV = holder.itemView.findViewById(R.id.eveTimeTV);
         maxclicksTV.setText(myEventModel.eventList.get(position).time);
     }
+
+
 
     @Override
     public int getItemCount() {

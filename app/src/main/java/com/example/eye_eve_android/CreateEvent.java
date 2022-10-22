@@ -101,10 +101,12 @@ public class CreateEvent extends AppCompatActivity {
             String eveLocation = newEventLocation.getText().toString();
             String eveDate = newEventDate.getText().toString();
             String eveTime = newEventTime.getText().toString();
+            String eveDesc=newEventDesc.getText().toString();
             intent.putExtra("eveName", eveName);
             intent.putExtra("eveLocation", eveLocation);
             intent.putExtra("eveDate", eveDate);
             intent.putExtra("eveTime", eveTime);
+            intent.putExtra("eveDescp",eveDesc);
             setResult(Activity.RESULT_OK, intent);
             finish();
         }

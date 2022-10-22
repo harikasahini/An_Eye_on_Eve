@@ -34,6 +34,8 @@ public class OrganizerView extends AppCompatActivity {
     private String eveLoc;
     private String evetime;
     private String evedate;
+    private String eveDescp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,7 +104,8 @@ public class OrganizerView extends AppCompatActivity {
                         eveLoc=intent.getStringExtra("eveLocation");
                         evetime=intent.getStringExtra("eveDate");
                         evedate=intent.getStringExtra("eveTime");
-                        myModel.eventList.add(new EventModel.Event(eveName,eveLoc,evedate,evetime));
+                        eveDescp=intent.getStringExtra("eveDescp");
+                        myModel.eventList.add(new EventModel.Event(eveName,eveLoc,evedate,evetime,eveDescp));
                         EventServer.notifyItemInserted(myModel.eventList.size()-1);
                     }
                 }
