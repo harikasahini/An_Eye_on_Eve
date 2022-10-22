@@ -17,7 +17,7 @@ public class RegistertoApp extends AppCompatActivity {
 
     public void onClickSigninR(View v){
 
-        Intent i=new Intent(this,OrganizerView.class);
+        Intent i=new Intent(this,MainActivity.class);
         startActivity(i);
     }
 
