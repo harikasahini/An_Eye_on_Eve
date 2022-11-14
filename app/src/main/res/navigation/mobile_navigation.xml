@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.eve.UserFragment"
+        android:label="View Events"
+        tools:layout="@layout/fragment_user" />
+
+    <fragment
+        android:id="@+id/nav_organizations"
+        android:name="com.example.eve.OrganizationsUVFragment"
+        android:label="Organizations"
+        tools:layout="@layout/fragment_organizations_u_v" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.eve.ui.slideshow.SlideshowFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_slideshow" />
+
+</navigation>
