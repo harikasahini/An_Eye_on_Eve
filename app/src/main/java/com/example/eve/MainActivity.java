@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -12,6 +13,10 @@ import android.widget.Toast;
 
 import com.example.eve.ui.home.HomeFragment;
 import com.example.eve.ui.home.HomeViewModel;
+import com.parse.GetCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,11 +24,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     public void onClickSignin(View v) {
+        testBackForApp();
         EditText newUserName = findViewById(R.id.username);
         EditText newPassword = findViewById(R.id.password);
         radioGroup = findViewById(R.id.radioGroup);
@@ -60,5 +67,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 //        mStartForResult.launch(i);
 //         = intent.getExtras().getString("EventName");
+    }
+    public void testBackForApp(){
+//        Log.v("Running: ","testBackForApp");
+        //Saving your First data object on Back4App
+        ParseObject person = new ParseObject("Person");
+        person.put("name", "");
+        person.put("age", 27);
+        person.saveInBackground();
     }
 }
