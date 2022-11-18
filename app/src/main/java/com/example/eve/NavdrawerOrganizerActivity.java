@@ -20,8 +20,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.eve.databinding.ActivityNavdrawerOrganizerBinding;
+
+import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 public class NavdrawerOrganizerActivity extends AppCompatActivity {
 

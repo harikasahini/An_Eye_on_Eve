@@ -1,7 +1,10 @@
 package com.example.eve;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +13,24 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class Register extends AppCompatActivity {
+import com.parse.SignUpCallback;
+import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
+public class Register extends AppCompatActivity {
+    private EditText regUsername, regPassword ,regConfirmPassword,regEmail;
+    private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        progressDialog = new ProgressDialog(Register.this);
+        regUsername=findViewById(R.id.fullName);
+        regEmail=findViewById(R.id.EmailAddress);
+        regPassword=findViewById(R.id.enterpassword);
+        regConfirmPassword=findViewById(R.id.confirmpassword);
     }
 
     public void onClickSigninR(View v) {
@@ -53,10 +68,27 @@ public class Register extends AppCompatActivity {
         } else if (!(newEnterPassword.getText().toString().matches(".*[A-Z].*"))) {
             Toast.makeText(Register.this, "Password should contain atleast one upper case letter!!", Toast.LENGTH_SHORT).show();
         } else {
-            Toast t = Toast.makeText(this, "Registered Succesfully!", Toast.LENGTH_SHORT);
-            t.show();
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
+            ParseUser user = new ParseUser();
+            // Set the user's username and password, which can be obtained by a forms
+            user.setUsername(regUsername.getText().toString());
+            user.setPassword(regPassword.getText().toString());
+            user.signUpInBackground(new SignUpCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e == null) {
+                        showAlert("Successful Sign Up!", "Welcome" + regUsername.getText().toString() +"!");
+                    } else {
+                        ParseUser.logOut();
+                        Toast.makeText(Register.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                        //Intent i = new Intent(this, MainActivity.class);
+                       // startActivity(i);
+                    }
+                }
+            });
+//            Toast t = Toast.makeText(this, "Registered Succesfully!", Toast.LENGTH_SHORT);
+//            t.show();
+//            Intent i = new Intent(this, MainActivity.class);
+//            startActivity(i);
 //            String fullName = newFullName.getText().toString();
 //            String email = newEmail.getText().toString();
 //            String enterPassword = newEnterPassword.getText().toString();
@@ -69,5 +101,29 @@ public class Register extends AppCompatActivity {
 //            finish();
         }
 
+    }
+    private void showAlert(String title,String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(Register.this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        if (radioButton.getText().equals("Log in as user")) {
+                            Intent UV = new Intent(Register.this, NavdrawerUserActivity.class);
+                            startActivity(UV);
+                            Toast t = Toast.makeText(Register.this, "Successful SignUp as user!\n"+regUsername.getText().toString()+" Logged in as user.", Toast.LENGTH_SHORT);
+                            t.show();
+                        } else if (radioButton.getText().equals("Log in as organizer")) {
+                            Intent OV = new Intent(Register.this, NavdrawerOrganizerActivity.class);
+                            startActivity(OV);
+                            Toast t = Toast.makeText(Register.this, "Successful SignUp as organizer!\n"+regUsername.getText().toString()+" Logged in as Organizer.", Toast.LENGTH_SHORT);
+                            t.show();
+                        }
+                    }
+                });
+        AlertDialog ok = builder.create();
+        ok.show();
     }
 }
