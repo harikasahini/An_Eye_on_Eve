@@ -8,4 +8,11 @@ Logo: <img width="305" alt="logof1" src="https://user-images.githubusercontent.c
 <p>Intended to help Users/Organizers to login into the application. User/Organizer can login using their username and password after registering. We can switch between the user and organizer.</p>
   <p><b>Register view</b>:</p>
 <p>Intended to collect Users/Organizers details and register them to the application. If the user/organizer didn’t have an account, they can register into the application by enrolling the details.</p>
-
+<p><b>Organizer view:</b></p>
+<p>If the person logged in as an organizer, he/she can create an event and can look into the events created by the organizer. Moreover, he/she can also search and view the events created by another organizer, just acting like a user.</p>
+<p><b>Create an event:</b></p>
+<p>The organizer must enter event details along with date, time and location. Moreover, if the organizer wants to covey any information regarding events can be include in event description.</p>
+<p><b>User view:</b></p>
+<p>User can check the event details according to their location. They can navigate to another view, where the detailed description of the event is visible. </p>
+<p><b>Event’s View:</b></p>
+<p>A user can register to the event. Provides the event’s detailed description related to the user’s choice of selection. If the event requires a registration, they can navigate to the event registration forms provided by the event organizer.</p>
