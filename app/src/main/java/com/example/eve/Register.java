@@ -45,6 +45,7 @@ public class Register extends AppCompatActivity {
     public void onClickRegisterR(View v) {
         EditText newFullName = findViewById(R.id.fullName);
         EditText newEmail = findViewById(R.id.EmailAddress);
+        EditText newLocation= findViewById(R.id.location);
         EditText newEnterPassword = findViewById(R.id.enterpassword);
         EditText newConfirmPassword = findViewById(R.id.confirmpassword);
         radioGroup = findViewById(R.id.radioGroup2);
@@ -56,6 +57,8 @@ public class Register extends AppCompatActivity {
             newFullName.setError("Full Name is required!");
         } else if (newEmail.getText().toString().trim().equalsIgnoreCase("")) {
             newEmail.setError("Email address is required!");
+        } else if (newLocation.getText().toString().trim().equalsIgnoreCase("")) {
+            newLocation.setError("Location is required!");
         } else if (newEnterPassword.getText().toString().trim().equalsIgnoreCase("")) {
             newEnterPassword.setError("Password is required!");
         } else if (newConfirmPassword.getText().toString().trim().equalsIgnoreCase("")) {
@@ -72,6 +75,9 @@ public class Register extends AppCompatActivity {
             // Set the user's username and password, which can be obtained by a forms
             user.setUsername(regUsername.getText().toString());
             user.setPassword(regPassword.getText().toString());
+            user.setEmail(regEmail.getText().toString());
+            user.put("fullName",newFullName.getText().toString());
+            user.put("location",newLocation.getText().toString());
             user.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
