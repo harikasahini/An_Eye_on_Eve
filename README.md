@@ -19,7 +19,7 @@ Email address: dwithi29@gmail.com<br>
 Password: 29Dwithi#<br>
 
 User login details:<br>
-Email address: sahini@gmail.com
+Email address: sahini@gmail.com<br>
 Password: Harika@8989 </p>
 
 <p>In this application, we have the following views:</p>
