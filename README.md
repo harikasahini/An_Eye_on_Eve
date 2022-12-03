@@ -16,7 +16,11 @@
 <p>In order to login to the application, here are the pre-registered users name and passwords.<br>
 Organizer login details:<br>
 Email address: dwithi29@gmail.com<br>
-Password: 29Dwithi#</p>
+Password: 29Dwithi#<br>
+
+User login details:<br>
+Email address: sahini@gmail.com
+Password: Harika@8989 </p>
 
 <p>In this application, we have the following views:</p>
   <p><b>Login view</b>:</p>
