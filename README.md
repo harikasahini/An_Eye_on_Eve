@@ -8,9 +8,34 @@
 - Reethu Gopireddy s546954
 - Kavya Mandlem s546900
 
+#### Problem Statement
+ - Most people lack the awareness of programs happening around them.
+ - Most events which help people to overcome stress, volunteer opportunities or community engagements are not reaching them.
+
+#### Proposed Solution
+- “AN EYE ON EVE” provides one stop solution for event promotions.
+- This app gathers trustworthy information from valid sources to serve users.
+- It helps people to actively participate in the programs by stacking up all ongoing and planned events details.
+
+
 #### Application information
 
 <p>“AN EYE ON EVE” is an application that helps people actively participate in the programs happening around them by providing details related to the ongoing and planned events in the nearby locations. Basically, this app allows users to know any kind of engaging or volunteering opportunities they do have near them to make their day grateful. Moreover, this app allows another kind of user domain that is organizers. So, using this app event organizers can update their event information which is visible to user. After the event date is over, the events will disappear from the app to maintain consistency and make sure the app is showing valid data.</p>
+
+#### Features of App
+###### Organizer Features:
+- Create
+- Search
+- Delete
+- Filter events 
+
+###### User Features:
+- Search
+- Filter 
+- Register
+- Promote
+- Enquire about events
+
 
 #### Login Credentials
 <p>In order to login to the application, here are the pre-registered users name and passwords.<br>
