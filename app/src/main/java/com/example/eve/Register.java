@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -71,26 +72,39 @@ public class Register extends AppCompatActivity {
         } else if (!(newEnterPassword.getText().toString().matches(".*[A-Z].*"))) {
             Toast.makeText(Register.this, "Password should contain atleast one upper case letter!!", Toast.LENGTH_SHORT).show();
         } else {
+            Log.d("on register details","I am at start");
             ParseUser user = new ParseUser();
+            Log.d("on register details","setting up");
             // Set the user's username and password, which can be obtained by a forms
+            try{
             user.setUsername(regUsername.getText().toString());
             user.setPassword(regPassword.getText().toString());
             user.setEmail(regEmail.getText().toString());
             user.put("fullName",newFullName.getText().toString());
             user.put("location",newLocation.getText().toString());
+                Log.d("on register details","i am upp up");
             user.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
+                    Log.d("on register details","i am upp up2");
                     if (e == null) {
-                        showAlert("Successful Sign Up!", "Welcome" + regUsername.getText().toString() +"!");
+                        showAlert("Successful Sign Up!", "Welcome" + regUsername.getText().toString() + "!");
+                        Intent i = new Intent(Register.this,MainActivity.class);
+                        startActivity(i);
                     } else {
                         ParseUser.logOut();
                         Toast.makeText(Register.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                        //Intent i = new Intent(this, MainActivity.class);
-                       // startActivity(i);
+
                     }
                 }
-            });
+
+            }
+            );
+            }
+            catch(Exception e)
+            {
+                Log.d("in register",e.toString());
+            }
 //            Toast t = Toast.makeText(this, "Registered Succesfully!", Toast.LENGTH_SHORT);
 //            t.show();
 //            Intent i = new Intent(this, MainActivity.class);

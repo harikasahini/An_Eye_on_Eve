@@ -100,6 +100,7 @@ public class EventModel {
         eventList.add(t6);
         Event t3 = new Event("Vintage Garage Brings Vintage to The LOT in Highland Park", "California","2022-10-23","10:00 PM","Savoring the end of outdoor event season, a Vintage Market is coming to the City of Highland Park's alfresco entertainment space The Lot (523 Central) in downtown Highland Park on Sunday.","Give heart");
         eventList.add(t3);
+
     }
 
 }

@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     public void onClickSignin(View v) {
-        testBackForApp();
+        // testBackForApp();
         EditText newUserName = findViewById(R.id.username);
         EditText newPassword = findViewById(R.id.password);
         radioGroup = findViewById(R.id.radioGroup);
@@ -91,14 +91,14 @@ public class MainActivity extends AppCompatActivity {
 //        mStartForResult.launch(i);
 //         = intent.getExtras().getString("EventName");
 
-    public void testBackForApp(){
-//        Log.v("Running: ","testBackForApp");
-        //Saving your First data object on Back4App
-        ParseObject person = new ParseObject("Person");
-        person.put("name", "");
-        person.put("age", 27);
-        person.saveInBackground();
-    }
+//    public void testBackForApp(){
+////        Log.v("Running: ","testBackForApp");
+//        //Saving your First data object on Back4App
+//        ParseObject person = new ParseObject("Person");
+//        person.put("name", "");
+//        person.put("age", 27);
+//        person.saveInBackground();
+//    }
 
     public void onClickRegisterR(View view) {
         Intent i=new Intent(this,Register.class);

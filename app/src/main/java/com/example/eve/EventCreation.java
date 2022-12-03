@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.SaveCallback;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -152,6 +157,7 @@ public class EventCreation extends Fragment {
 
                     try {
                         // send back amount*p9rice
+
                         Bundle b=new Bundle();
                         b.putString("eveName",newEventName.getText().toString());
                         b.putString("eveOrgName",newOrganizationName.getText().toString());
@@ -159,6 +165,7 @@ public class EventCreation extends Fragment {
                         b.putString("eveLocation",newEventLocation.getText().toString());
                         b.putString("eveDate",newEventDate.getText().toString());
                         b.putString("eveTime",newEventTime.getText().toString());
+                        setupDatamodel(b);
                         NavdrawerOrganizerActivity.onCreateNewEve(b);
                     } catch (Exception e) {
                         // Do nothing
@@ -169,6 +176,34 @@ public class EventCreation extends Fragment {
 
         return v;
     }
+    private void setupDatamodel(Bundle bundleNew) {
 
+        try {
+            Log.d("inside setup","starting");
+            ParseObject newObj = new ParseObject("Events");
+            newObj.put("eventName", bundleNew.getString("eveName"));
+            newObj.put("eventLocation", bundleNew.getString("eveLocation"));
+            newObj.put("Date", bundleNew.getString("eveDate"));
+            newObj.put("Time", bundleNew.getString("eveTime"));
+            newObj.put("eventDescription", bundleNew.getString("eveDesc"));
+            newObj.put("eventOrganization", bundleNew.getString("eveOrgName"));
+            newObj.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e == null) {
+                        // Success
+                       // Log.d("inside success",e.toString());
+                    } else {
+                        Log.d("inside setup","success failed");
+                    }
+                }
+            });
+            Log.d("inside setup","ending");
+        }
+        catch(Exception e){
+            Log.d("inside setup","error");
+        }
+
+    }
 
 }
