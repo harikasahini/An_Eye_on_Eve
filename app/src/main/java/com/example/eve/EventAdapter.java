@@ -11,8 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class EventAdapter extends
-        RecyclerView.Adapter<EventAdapter.EventViewHolder>{
+public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder>{
 
     public static class EventViewHolder extends RecyclerView.ViewHolder {
         public EventViewHolder(View v) {
